@@ -1,1 +1,3 @@
-all
+stopwords
+wordnet
+wordnet2021
