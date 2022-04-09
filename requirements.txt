@@ -96,7 +96,6 @@ pathy==0.6.1
 pdfplumber==0.6.0
 pickleshare==0.7.5
 Pillow==8.4.0
-pke==2.0.0
 platformdirs==2.4.0
 preshed==3.0.6
 prometheus-client==0.14.1
