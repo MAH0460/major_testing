@@ -1,0 +1,65 @@
+{% extends "index.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/css/login.css"/>
+ <title>Login</title>
+{% endblock %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+<script>
+    alert("{{ message }}")
+</script>
+{% endfor %}
+
+<!-- login form design -->
+    <section>
+      <h1>Welcome</h1>
+      <div>
+        <form action="backend.php">
+          <div class="container">
+            <i class="bi bi-envelope-fill"></i>
+            Email<input type="email" placeholder="email@address.com" name="uid" id="myEmail" class="e-mail"/>
+          </div>
+          <div class="container">
+            <i class="bi bi-key-fill"></i>
+            Password
+            <input type="password" placeholder="Password" name="pwd" id="password" class="password"/>
+            <span class="eye" onclick="showHide()">
+              <i id="open" class="bi bi-eye-fill"></i>
+              <i id="close" class="bi bi-eye-slash-fill"></i>
+            </span>
+          </div>
+          <div class="container">
+            <input type="submit" value="Login" class="submit-button"/>
+            <input type="reset" value="Reset" class="submit-button" />
+          </div>
+          <div class="link-button">
+            <p> Forgot Password? <a href="{{ url_for('forgot_pswd') }}">Click Here</a></p>
+            <p>
+              Not registered yet? <a href="{{ url_for('register')}}">Register Now!</a> It's Free
+            </p>
+          </div>
+          <script>
+            function showHide(){
+              var x = document.getElementById('password');
+              var y = document.getElementById('close');
+              var z = document.getElementById('open');
+
+              if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+              }
+              else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+              }
+            }
+          </script>
+        </form>
+      </div>
+    </section>
+{% endblock %}

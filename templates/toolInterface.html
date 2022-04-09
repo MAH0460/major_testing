@@ -1,0 +1,122 @@
+{% extends "index.html" %}
+
+{% block head %}
+
+<!--link rel="stylesheet" href="https://www.paraphraser.io/assets/frontend/css/style.css?v=2.4.17"-->
+<link rel="stylesheet" href="../static/css/toolInterface.css"/>
+<script defer src="../static/javascript/toolInterface.js"></script>
+
+<title>{{toolname}}</title>
+{% endblock %}
+
+<style>
+    <script type="text/javascript">
+ 		var is_mobile=window.innerWidth<768,is_mobile_x=window.innerWidth<576;
+ 	</script>
+
+</style>
+
+{% block content %}
+<!--  toolkit design input -->
+<
+<section class="feature_part mt-5 pd-4">
+    <div class="container new_style_container mt-4">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-xl-12">
+                <div class="banner_text">
+                    <div class="banner_text_inner">
+                        <div class="row mt-0 paraphraser_main_box">
+                            <div class="col-lg-6 col-md-12 ml-0 mr-0 p-1 paraphraser_input_box"
+                                 style="margin-top: 15px;">
+                                <div class="input-output-main-box">
+                                    <form action="" method="POST" id="paraphrase_form"
+                                          style="position:relative;margin-bottom: unset !important;"
+                                          enctype="multipart/form-data">
+                                        <span>{{toolname}}</span>
+                                        <textarea name="input_content" oninput="countWords(getId='input-content',setId='input-count')"
+                                                  id="input-content">
+                                        </textarea>
+                                    </form>
+                                    <!--  Input Side Buttons -->
+                                    <div class="container wrap-btns" id="inputWrap">
+
+                                        <!--Customizing File INPUT BUTTON-->
+                                        <label class="output-btn">
+                                            <input type="file" accept="application/pdf" name="uploadFile"/>
+                                            <i class="fa fa-book">
+                                                <a class="output-btn" id="file-btn">Upload</a>
+                                            </i>
+                                        </label>
+
+                                        <span>
+                                            <span id="rangeValue" style="color:hotpink;font-weight:bold;">30</span>
+                                        <input class="range" type="range" name="slider" value="30" min="30" max="80"
+                                               onChange="rangeSlide(this.value)" title="Size"
+                                               onmousemove="rangeSlide(this.value)"/>
+                                        </span>
+
+                                        <button class="output-btn" title="Build" name="executeTask"
+                                                onclick="getOutputEvent('{{toolname}}')"><i class="fa fa-play"></i>
+                                        </button>
+
+                                        <button class="output-btn" name="clearText" title="Reset"
+                                                onclick="document.getElementById('input-content').value = null;
+                                                document.getElementById('output-content').value = null
+                                                countWords(0);">
+                                            <i class="fa fa-remove"></i>
+                                        </button>
+
+                                        <output>words:<span id="input-count" class="total-words">0</span></output>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--OUTPUT BOX-->
+                            <div class="col-lg-6 col-md-12 ml-0 mr-0 p-1 paraphraser_output_box"
+                                 style="margin-top: 15px;">
+                                <div class="input-output-main-box">
+                                    <span class="paraphrased-span">Output</span>
+                                    <!--div name="output_content" id="output-content"
+                                         style="border-bottom-left-radius: unset;border-bottom-right-radius: unset;"></div-->
+
+                                    <div>
+                                                <textarea disabled name="_text_to_exported" id="output-content"
+                                                          oninput="countWords(getId='output-content',setId='output-count')">
+                                                </textarea>
+                                    </div>
+
+                                </div>
+                                <!--OUTPUT BUTTONS -->
+                                <div class="wrap-btns" id="outputWrap">
+                                    <button class="output-btn" name="downloadPDF"
+                                            onclick="printTextArea(document.getElementById('output-content'))">PDF<i
+                                            class="fa fa-file"></i></button>
+                                    <button class="output-btn" name="uploadData">Save<i class="fa fa-upload"></i>
+                                    </button>
+                                    <button class="output-btn" name="print"
+                                            onclick="printTextArea(document.getElementById('output-content'))">Print<i
+                                            class="fa fa-print"></i></button>
+                                    <button class="output-btn">Copy<i class="fa fa-copy"></i></button>
+                                    <output>words:<span id="output-count" class="total-words">0</span></output>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+        function  rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
+</script>
+
+<!--  button design
+<center>
+<input type="submit" value="Generate" class="output-btn"/>
+</center>
+-->
+{% endblock %}

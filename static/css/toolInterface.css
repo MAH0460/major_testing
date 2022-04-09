@@ -1,0 +1,233 @@
+html,
+body{
+   background: white;
+   margin:0px;
+   min-height:100vh;
+   font-family: poppins;
+   overflow-x:hidden;
+   display:flex;
+   flex-direction:column;
+}
+
+/*Overriding tweaks*/
+
+
+.paraphraser_main_box {
+	padding-left: 12px;
+	padding-right: 12px
+}
+
+.paraphraser_main_box .paraphrase-loader {
+	position: absolute;
+	width: 100%;
+	top: 180px;
+	text-align: left;
+	padding-left: 20%;
+	padding-right: 20%;
+	z-index: 2;
+	display: none;
+	left: 50%;
+	transform: translate(-50%, 10px)
+}
+
+.paraphraser_main_box .progress-bar {
+	width: 0;
+	height: 10px;
+	float: left;
+	background-color: #3dd9b1
+}
+
+.paraphraser_main_box #percent-suggested {
+	font-weight: 700
+}
+
+.paraphraser_main_box .paraphraser_input_box {
+	padding-right: 20px!important;
+	z-index: 1
+}
+
+.paraphraser_main_box .paraphraser_output_box {
+	position: relative;
+	z-index: 10
+}
+
+.paraphraser_main_box .paraphraser_option_box {
+	position: absolute;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: grid;
+	display: flex;
+	right: 35px;
+	top: 8px
+}
+
+.paraphraser_main_box #paraphrase_form span {
+	background: #0c2e60;
+	padding: 1px 5px;
+	position: absolute;
+	top: -7px;
+	left: 15px;
+	color: #fff;
+	border: solid 1px #0c2e603b;
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.paraphraser_main_box #paraphrase_form #input-content {
+	white-space: pre-wrap;
+	box-shadow: 1px 3px 54px -8px #d3d3d375;
+	background: #fff;
+	z-index: 1;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	height: 350px;
+	font-size: 14px
+}
+
+.paraphraser_main_box .paraphraser_output_box .paraphrased-span {
+	background: #0c2e60;
+	padding: 1px 5px;
+	position: absolute;
+	top: -7px;
+	left: 15px;
+	color: #fff;
+	border: solid 1px #0c2e603b;
+	border-radius: 5px;
+	z-index: 2
+}
+
+.paraphraser_main_box .paraphraser_output_box #output-content {
+	white-space: pre-wrap;
+	box-shadow: 1px 3px 54px -8px #d3d3d375;
+	background: #fff;
+	overflow-y: auto;
+	z-index: 1;
+	font-size: 14px
+}
+
+.paraphrasing_levels:hover {
+	cursor: pointer
+}
+
+.paraphrasing_levels {
+	border-radius: 10px;
+	text-align: left;
+	padding: 2px 5px;
+	font-size: 16px;
+	color: #000;
+	background: #fff
+}
+/* Word counter*/
+.counter-box{
+background: white;
+width: 100%;
+justify-content: right;
+padding: 5px;
+bottom: 0;
+left: 0;
+z-index:2;
+border:solid black;
+}
+
+.total-words
+{
+    text-align:right;
+    justify:right;
+    font-weight:bold;
+    color:hotpink;
+}
+
+/* nav bar spacing */
+.nav{
+margin-bottom:50px;
+}
+.navsize{
+    padding: 20px;
+}
+.nav-link:hover{
+    background-color: hotpink;
+}
+h2{
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:20px;
+}
+
+#sumdiv p{
+ color: #444 !important; font-size:14px
+ }
+
+ #sumdiv p:first-child{
+ margin:0
+ }
+
+
+ .paraphraser_main_box .paraphrase-loader{
+      left:31% !important
+ }
+
+.wrap-btns{
+display:flex;
+justify-content:space-around;
+}
+
+#copy_to_clipboard_box{
+overflow:visible;
+}
+
+#input-content,
+#output-content {
+	resize: vertical;
+	width: 100%;
+	height: 350px;
+	border: solid black;
+	border-radius: 5px;
+	padding: 20px;
+	text-align:justify;
+}
+
+/* output button */
+.output-btn, #file-btn{
+    position: relative;
+    margin-inline-end: 10px;
+    padding:5px;
+    border-radius: 20px;
+    font-size:15px;
+    font-weight: bold;
+    text-decoration:none;
+    color:black;
+}
+.output-btn:hover{
+    background-color: hotpink;
+}
+
+/*
+input[type=file]{
+  content: 'Select some files';
+  display: inline-block;
+  border: none;
+  padding: 2px;
+  whitespace:none;
+  outline: none;
+  font-weight: 700;
+  font-size: 10pt;
+}*/
+
+input[type=file]{
+display:none;
+}
+
+/* footer */
+/*To make footer stick at the bottom make body display as flex with direction set to column.
+Then add margin-top:auto in footer styling*/
+footer{
+    background-color: hotpink;
+    text-align: center;
+    padding:2px;
+    font-style: italic;
+    position: relative;
+    overflow: auto;
+    margin-top:auto;
+}

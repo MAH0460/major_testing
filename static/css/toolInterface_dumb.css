@@ -1,0 +1,127 @@
+/* nav bar spacing */
+.navsize{
+    padding: 11px;
+}
+.nav-link:hover{
+    background-color: hotpink;
+}
+/* login heading */
+h2{
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:20px;
+}
+html,
+body{
+   font-family: poppins;
+   margin:0px;
+   width:100vw;
+   overflow-x:hidden;
+}
+/*  summary design */
+.temp123{
+  margin:40px 0px 30px 0px;
+  padding: 0.5px 60px 0px 60px;
+  text-align: center;
+  background: #fff;
+  width: 100%;
+  }
+.login-bg{
+    height: 100px;
+    position: relative;
+    
+}
+.login-bg-1{
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.login-bg h2{
+     color: #fff;
+     background: hotpink;
+     font-size: 24px;
+     text-align: center;
+     margin: 0 0 15px;
+     font-weight: 700;
+     bottom: -25px;
+     border-radius: 50px;
+     letter-spacing: 2px;
+     padding: 15px;
+}
+.temp123:hover .service-bg h2{
+     background: #fff:
+     transition: .9s;
+     color: #000000;
+}
+/*range slider*/
+.range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15px;
+  background: hotpink;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #000000;
+  font-weight: 800;
+}
+.range {
+  width: 400px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #FFFFFF;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -407px 0 0 400px hotpink;
+}
+textarea.md-textarea-scroll{
+  overflow-y: visible;
+}
+textarea.md-textarea {
+  margin:10px;
+  width:80vw;
+  min-width:50vw;
+  padding: 4px;
+  resize: none;
+  min-height: 50vh;
+}
+
+.output-btn{
+    position: inherit;
+    margin-inline-end: 10px;
+    border-radius: 20px;
+    margin-top: auto;
+    font-weight: bold;
+}
+.output-btn:hover{
+    background-color: hotpink;
+}
+
+/* footer */
+footer{
+    background-color: hotpink;
+    text-align: center;
+    font-style: italic;
+    padding-top:20px;
+    min-width: 100vw;
+    height: 100px;
+    position: relative;
+    overflow: auto;
+}

@@ -1,0 +1,193 @@
+/* nav bar spacing */
+.navsize{
+    padding: 11px;
+}
+.nav-link:hover{
+    background-color: hotpink;
+}
+/* signup heading */
+h1{
+    margin-top: 120px;
+    text-align: center;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* form designing */
+form{
+    text-align: center;
+    padding: 20px;
+}
+.e-mail{
+    position: relative;
+    margin-left: 110px;
+    border-radius: 10px;
+}
+.password{
+    position: relative;
+    margin-left: 80px;
+    border-radius: 10px;
+}
+::placeholder{
+    color: black;
+}
+.pwd{
+    position: relative;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+/* icons adjustment */
+.bi {
+    margin-right: 10px;
+}
+.eye{
+    position: absolute;
+    margin-left: -22px; 
+    cursor: pointer;
+    padding-top: 2px;
+}
+#close{
+    display: none;
+}
+
+/* form */
+.container{
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.container:hover{
+    color: hotpink;
+}
+.submit-button{
+    position: inherit;
+    margin-inline-end: 10px;
+    border-radius: 20px;
+    margin-top: auto;
+    font-weight: bold;
+}
+.submit-button:hover{
+    background-color: hotpink;
+}
+
+/* already have an account */
+.link-button{
+    font-weight: bold;
+    color: black;
+}
+.link-button a{
+    color: black;
+}
+a:hover{
+    color: hotpink;  
+}
+/* footer */
+footer{
+    background-color: hotpink;
+    text-align: center;
+    font-style: italic;
+    padding: 3% 0 5%;
+    margin:0 auto;
+    width: 100%;
+    height: 100px;
+    overflow:hidden;
+    position: fixed;
+    bottom: 0px;
+}
+/* otp page tweaks */
+.otp-msg{
+    font-weight: bold;
+    font-size:x-large;
+    margin-top: 25px;
+}
+
+.otp{
+    font-weight: bold;
+    font-size:x-large;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.otp:hover{
+    color: hotpink;
+}
+.otpbox{
+    position: relative;
+    border-radius: 10px;
+    margin-left: 15px;
+    font-size: large;
+    max-width: 100px;
+}
+.verify-btn{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.verify-btn:hover{
+    background-color: hotpink;
+}
+h2{
+    text-align: center;
+    margin: 70px auto auto auto;
+    max-width: 100px;
+}
+/* forgot password page */
+.forgotPwd{
+    position: relative;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.pwdContainer{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+/* reset password page */
+.resetPwd{
+    margin-left: 120px;
+}
+/* feedback form css */
+#subject{
+    margin-right: 300px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.subject-textbox{
+    position: relative;
+    margin-left: 70px;
+    border-radius: 10px;
+    height: 60px;
+    width: 26.5%;
+    word-wrap:break-word;
+    overflow-y: scroll;
+}
+.boxhover:hover{
+    color: hotpink;
+}
+.description{
+    margin-right: 270px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.ssContainer{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 45px;
+}
+.ssContainer:hover{
+    color: hotpink;
+}
+.ss{
+    margin-left: 10px;
+    border-radius: 1px;
+}
+.ss:hover{
+    color: hotpink;
+}
+

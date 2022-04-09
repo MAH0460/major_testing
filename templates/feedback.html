@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/css/signup.css"/>
+ <title>Feedback</title>
+{% endblock %}
+
+{% block content %}
+<!-- feedback form design -->
+    <section>
+      <h1>Feedback</h1>
+      <div>
+        <form action="backend.php">
+          <div class="boxhover">
+            <p id="subject">
+              <i class="bi bi-pin-angle-fill"></i>
+            Subject
+            </p>
+            <textarea name="" id="" class="subject-textbox" placeholder="Write your subject here..." cols="30" rows="10"></textarea>
+          </div>
+          <div class="boxhover">
+            <p class="description">
+              <i class="bi bi-pencil-square"></i>
+            Description
+            </p>
+            <textarea name="" id="" class="subject-textbox" placeholder="Your feedback is important to us..." cols="30" rows="10"></textarea>
+          </div>
+          <div class="ssContainer">
+            <i class="bi bi-image"></i>
+            Screenshot
+            <input type="file" name="" id="" class="ss "/>
+          </div>
+          <div class="container">
+            <input type="submit" value="Thank You " class="submit-button"/>
+          </div>
+        </form>
+      </div>
+    </section>
+{% endblock %}

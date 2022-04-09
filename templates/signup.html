@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/css/signup.css"/>
+ <title>Sign Up!</title>
+{% endblock %}
+
+{% block content %}
+<!-- signup form design -->
+    <section>
+      <h1>Sign Up</h1>
+      <div>
+        <form action="backend.php">
+          <div class="container ">
+            <i class="bi bi-envelope-fill"></i>
+            Email<input type="email" placeholder="email@address.com" name="uid" id="myEmail" class="e-mail"/>
+          </div>
+          <div class="container">
+            <i class="bi bi-key-fill"></i>
+            Password
+            <input type="password" placeholder="Password" name="pwd" id="password" class="password"/>
+            <span class="eye" onclick="showHide()">
+              <i id="open" class="bi bi-eye-fill"></i>
+              <i id="close" class="bi bi-eye-slash-fill"></i>
+            </span>
+          </div>
+          <div class="container">
+            <i class="bi bi-key-fill"></i>
+            Confirm Password
+            <input type="password" placeholder="Password" name="cnfpwd" id="cnfpwd" class="pwd"/>
+          </div>
+          <div class="container">
+            <input type="submit" value="Create account" class="submit-button"/>
+          </div>
+          <div class="link-button">
+            <p> Already have an account? <a href="{{ url_for('login')}}" target="_blank">Sign In</a></p>
+          </div>
+          <script>
+            function showHide(){
+              var x = document.getElementById('password');
+              var y = document.getElementById('close');
+              var z = document.getElementById('open');
+
+              if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+              }
+              else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+              }
+            }
+          </script>
+        </form>
+      </div>
+    </section>
+{% endblock %}
